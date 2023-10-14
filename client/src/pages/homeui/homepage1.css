@@ -1,0 +1,261 @@
+.hero {
+ /* position: relative; */
+ /* filter: drop-shadow(-14px 14px 3px #d5d2d2); */
+}
+
+.rightz {
+ width: 40vw;
+}
+
+.leftz {
+ min-width: 45vw;
+}
+
+.top {
+ margin-top: 100px;
+}
+
+.containerz {
+ max-width: 95%;
+
+ margin: auto;
+}
+.f_flex {
+ display: flex;
+}
+.hero h1 {
+ font-size: 60px;
+ font-weight: bold;
+}
+
+.hero h1 span {
+ color: #ff014f;
+}
+.hero h2 {
+ font-size: 50px;
+ font-weight: bold;
+ color: #ff014f;
+}
+.hero h2 span {
+ color: black;
+}
+.hero h3 {
+ /* font-weight: 100; */
+ letter-spacing: 2px;
+}
+.hero p {
+ /* color: #878e99; */
+ font-size: 18px;
+ line-height: 30px;
+ margin-top: 30px;
+}
+.hero_btn {
+ margin-top: 20%;
+}
+.hero_btn h4 {
+ font-weight: 500;
+ letter-spacing: 2px;
+ color: #43474b;
+ font-size: 15px;
+ margin: 30px 0 30px 0;
+}
+.hero_btn button {
+ margin-right: 30px;
+}
+.hero_btn i {
+ font-size: 20px;
+}
+
+.hero_btn button img {
+ width: 20px;
+ height: 20px;
+}
+.hero .leftz {
+ margin-right: 10%;
+}
+.hero .rightz {
+ width: 40%;
+}
+.hero .rightz_img {
+ background: linear-gradient(145deg, #e2e8ec, #ffffff);
+ box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+ border-radius: 10px;
+ /* height: 520px; */
+ height: 520px;
+ width: 510px;
+ position: relative;
+
+ /* margin-top: 20%; */
+}
+.hero .rightz_img img {
+ position: absolute;
+ top: 0;
+ /* right: 10%; */
+ width: 510px;
+}
+.hero .rightz_img img:hover {
+ transform: rotateY(180deg);
+}
+.btn_shadow {
+ margin-bottom: 20px;
+}
+
+
+
+
+@media (max-width: 768px) {
+ .hero .rightz,
+ .hero .leftz {
+   width: 100%;
+   margin-left: 20px;
+ }
+ .hero .rightz {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .hero .f_flex {
+   flex-direction: column;
+   flex-direction: column-reverse;
+ }
+ .hero .rightz_img {
+   display: none;
+ }
+}
+
+@media (max-width: 650px) {
+ .hero {
+   margin-bottom: 20%;
+ }
+ .f_flex,
+ .d_flex {
+   margin-top: 0;
+ }
+ .btn_shadow {
+   margin-bottom: 20px;
+ }
+}
+
+@media (min-width: 650px) {
+ .hero_btn {
+   margin-top: 20px;
+ }
+}
+
+.imgz {
+ height: 80vh;
+ width: 40vw;
+ display: flex;
+ /* float: right;
+ margin-top: 350px; */
+ position: absolute;
+}
+
+.img1 {
+ box-sizing: border-box;
+ position: relative;
+ width: 50%;
+ height: 60%;
+ left: -17%;
+ top: 40%;
+ z-index: -1;
+ border: 1px solid #000000;
+}
+
+.img2 {
+ box-sizing: border-box;
+ position: relative;
+ width: 50%;
+ height: 60%;
+ top: 24%;
+ left: -35%;
+ z-index: 1;
+ border: 1px solid #000000;
+}
+
+.img3 {
+ box-sizing: border-box;
+ position: relative;
+ width: 50%;
+ height: 60%;
+ top: 8%;
+ left: -56%;
+ z-index: 100;
+
+ border: 1px solid #000000;
+}
+
+
+/*  */
+.buttonContainer{
+display: flex;
+ /* justify-content: center; */
+ /* align-items: center; */
+ flex-direction: column;
+}
+.buttonContainer a{
+position: relative;
+ width: 160px;
+ height: 60px;
+ display: inline-block;
+ background: #fff;
+ margin: 20px;
+}
+.buttonContainer a:before,
+.buttonContainer a:after
+{
+content:'';
+ position: absolute;
+ inset: 0;
+ transition: 0.5s;
+ background: #f00
+}
+.buttonContainer a:nth-child(2):before,
+.buttonContainer a:nth-child(2):after
+{
+background: linear-gradient(45deg, #00ccff, #0e1538, #d400d4)
+}
+.buttonContainer a:nth-child(1):before,
+.buttonContainer a:nth-child(1):after
+{
+ background: linear-gradient(45deg, #f0075b, #0e1538, #1aff22);
+}
+.buttonContainer a:hover:before
+{
+ inset: -3px;  
+}
+.buttonContainer a:hover:after
+{
+ inset: -3px;  
+ filter: blur(10px);
+}
+.buttonContainer a span{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: inline-block;
+ background: #0e1538;
+ z-index: 10;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.2em;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #fff;
+ border: 1px solid #040a29;
+ overflow: hidden;
+}
+.buttonContainer a span::before{
+content:'';
+ position: absolute;
+ top: 0;
+ left: -50%;
+ width: 100%;
+ height: 100%;
+ background: rgba(255,255,255,0.075);
+   transform: skew(25deg)
+}

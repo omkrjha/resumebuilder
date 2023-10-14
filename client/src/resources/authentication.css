@@ -1,0 +1,244 @@
+.auth-parent {
+ /* height: 100vh; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+ /* position: absolute; */
+ width: 100%;
+
+} 
+.auth-parent h1 {
+ font-size: 22px;
+ font-weight: bold;
+ margin-bottom: -10px;
+}
+.auth-parent form {
+ width: 400px;
+ box-shadow: 0 0 3px gray;
+ /* padding: 20px; */
+ background-color: white !important;
+ z-index: 1;
+ padding: 30px 30px;
+ opacity: 0.85;
+}
+
+.grid-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-gap: -30px;
+ align-items: center;
+ margin-top: 5%;
+ padding: 40px;
+ height: 80vh;
+ overflow: hidden;
+}
+
+.lefti {
+ /* border: solid black; */
+ width: 77%;
+ height: 50%;
+ font-size: large;
+ display: flex;
+ margin-left: 7rem;
+ /* background-image: linear-gradient(to right, #e9e4ef 0%, #4789fb 100%); */
+ padding-bottom: -15px;
+ /* padding: 30px; */
+}
+
+/*  */
+.box {
+ width: 27.5rem;
+ height: 150px;
+ background-color: #ddfff7;
+ position: relative;
+ box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
+}
+.box:after,
+.box:before {
+ mix-blend-mode: multiply;
+ filter: none;
+ z-index: -1;
+ content: '';
+ width: calc(100% + (50px * 2));
+ height: calc(100% + (50px * 2));
+ position: absolute;
+ display: block;
+ animation: border 10s ease-in-out infinite;
+ transform: translateX(-50px) translateY(-50px);
+}
+@keyframes border {
+ 0%,
+ 100% {
+   -webkit-clip-path: polygon(
+     0 0,
+     calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+     100% 100%,
+     calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+   );
+   clip-path: polygon(
+     0 0,
+     calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+     100% 100%,
+     calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+   );
+ }
+ 50% {
+   -webkit-clip-path: polygon(
+     calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+     100% 0,
+     calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+     0 100%
+   );
+   clip-path: polygon(
+     calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+     100% 0,
+     calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+     0 100%
+   );
+ }
+}
+
+.box:after {
+ animation-delay: -5s;
+ background-color: #93e1d8;
+ clip-path: polygon(
+   0 0,
+   calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+   100% 100%,
+   calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+ );
+}
+.box:before {
+ background-color: #aa4465;
+ clip-path: polygon(
+   calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+   100% 0,
+   calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+   0 100%
+ );
+}
+
+.box:hover:after {
+ animation-delay: -0.1s;
+}
+.box:hover:before,
+.box:hover:after {
+ animation-duration: 0.2s;
+}
+
+/*  */
+.cont {
+ margin-bottom: -5px;
+ background: transparent;
+}
+
+.righti {
+ margin-right: 5rem;
+ width: 60%;
+}
+
+.brand {
+ font-size: 250px !important;
+ position: absolute;
+ top: 30%;
+ width: 100%;
+ left: 0;
+ text-align: center;
+ transform: rotate(-10deg) !important;
+ color: rgba(0, 0, 0, 0.747);
+ transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1000px) {
+ .brand {
+   display: none;
+ }
+}
+
+.nav {
+ margin-top: 5px;
+ font-size: 17px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/*  */
+
+.glow-on-hover {
+ width: 110px;
+ height: 40px;
+ border: none;
+ outline: none;
+ color: #fff;
+ background: #d8d0d0;
+ cursor: pointer;
+ position: relative;
+ z-index: 0;
+ border-radius: 10px;
+}
+
+.glow-on-hover:before {
+ content: '';
+ background: linear-gradient(
+   45deg,
+   #ff0000,
+   #ff7300,
+   #fffb00,
+   #48ff00,
+   #00ffd5,
+   #002bff,
+   #7a00ff,
+   #ff00c8,
+   #ff0000
+ );
+ position: absolute;
+ top: -2px;
+ left: -2px;
+ background-size: 400%;
+ z-index: -1;
+ filter: blur(5px);
+ width: calc(100% + 4px);
+ height: calc(100% + 4px);
+ animation: glowing 20s linear infinite;
+ opacity: 0;
+ transition: opacity 0.3s ease-in-out;
+ border-radius: 10px;
+}
+
+.glow-on-hover:active {
+ color: #000;
+}
+
+.glow-on-hover:active:after {
+ background: transparent;
+}
+
+.glow-on-hover:hover:before {
+ opacity: 1;
+}
+
+.glow-on-hover:after {
+ z-index: -1;
+ content: '';
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background: #111;
+ left: 0;
+ top: 0;
+ border-radius: 10px;
+}
+
+@keyframes glowing {
+ 0% {
+   background-position: 0 0;
+ }
+ 50% {
+   background-position: 400% 0;
+ }
+ 100% {
+   background-position: 0 0;
+ }
+}

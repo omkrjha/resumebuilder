@@ -1,0 +1,15 @@
+.home1{
+ height: 90vh;
+ display: flex;
+ overflow: hidden;
+ margin-bottom: 50px;
+ }
+ 
+ .home2{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+ margin-left: 40px;
+ 
+ }
